@@ -1,0 +1,6 @@
+import{p as m,M as c,r as d,l as f,d as v,t as y,a as R}from"./index-DxNmIPOY.js";import"./leaflet-CQ57qwzs.js";let e=null,n=null;function S(o,s,u){e&&o.removeControl(e),e=L.Routing.control({waypoints:[L.latLng(c),L.latLng(s)],fitSelectedRoutes:!0,routeWhileDragging:!1,addWaypoints:!1,draggableWaypoints:!1,showAlternatives:!1,show:!1,createMarker:function(r,a,t){return r===0?L.marker(a.latLng,{icon:L.divIcon({className:"main-pin-icon",html:m,iconAnchor:[24,35]})}):null}}),e.on("routesfound",function(r){d();const a=r.routes[0];setTimeout(()=>{const t=document.createElement("div");t.className="custom-summary-route-box",t.innerHTML=`
+      <div class="summary-close-btn" title="Close">×</div>
+      <div>${f} ${u}</div>
+      <div>${v} ${(a.summary.totalDistance/1e3).toFixed(1)} km</div>
+      <div>${y} ${Math.round(a.summary.totalTime/60)} min</div>
+    `;const i=document.querySelector(".leaflet-top.leaflet-right"),l=document.querySelector(".custom-summary-route-box");l&&(i.removeChild(l),n=null),i&&(i.appendChild(t),n=t),t.querySelector(".summary-close-btn").addEventListener("click",()=>{g(),p(o),R(o)})},200)})}function p(o){e&&o.removeControl(e)}function T(o){e&&e.addTo(o)}function g(){n&&(n.remove(),n=null)}export{T as addRoadRouteToMap,S as createRoadRouteFromMainPlace,p as removeAnyRoadRoute,g as removeSummaryRouteInfo};
