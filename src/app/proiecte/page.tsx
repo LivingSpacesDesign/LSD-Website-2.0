@@ -106,7 +106,7 @@ function ProjectsContent() {
         {/* Project tabs row */}
         <div className="relative">
           <div className="absolute right-0 top-0 bottom-0 w-10 z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, rgba(232,228,223,0.9), transparent)' }} />
-          <div className="flex gap-2 overflow-x-auto scrollbar-hide px-6 md:px-12 py-3">
+          <div className="flex gap-2 overflow-x-auto scrollbar-hide px-6 md:px-12 py-3 md:justify-center">
             {list.map((p, i) => (
               <button
                 key={p.slug}
