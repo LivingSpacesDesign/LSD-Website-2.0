@@ -26,7 +26,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-deep/40 via-deep/60 to-deep" />
 
       {/* Content — bottom-left */}
-      <div className="absolute inset-0 flex flex-col justify-end p-6 pb-[120px] md:p-12 md:pb-[120px]">
+      <div className="absolute inset-0 flex flex-col justify-center md:justify-end p-6 pb-16 md:p-12 md:pb-[120px]">
         {/* Label */}
         <p className="text-label mb-6" style={{ color: 'rgba(245, 240, 232, 0.7)' }}>
           {t('DEZVOLTATOR REZIDENȚIAL PREMIUM', 'PREMIUM RESIDENTIAL DEVELOPER')}
