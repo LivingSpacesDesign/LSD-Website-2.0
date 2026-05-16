@@ -43,11 +43,11 @@ export function Header() {
         style={{
           height: 'var(--header-h)',
           padding: '0 var(--header-px)',
-          background: scrolled
-            ? (isLightPage ? 'rgba(232, 228, 223, 0.9)' : 'rgba(10, 10, 8, 0.9)')
-            : 'transparent',
-          backdropFilter: scrolled ? 'blur(24px)' : 'none',
-          WebkitBackdropFilter: scrolled ? 'blur(24px)' : 'none',
+          background: isLightPage
+            ? 'rgba(232, 228, 223, 0.9)'
+            : (scrolled ? 'rgba(10, 10, 8, 0.9)' : 'transparent'),
+          backdropFilter: (isLightPage || scrolled) ? 'blur(24px)' : 'none',
+          WebkitBackdropFilter: (isLightPage || scrolled) ? 'blur(24px)' : 'none',
           transition: 'background 0.4s ease, backdrop-filter 0.4s ease',
         }}
       >
