@@ -136,6 +136,25 @@ function ProjectsContent() {
       {/* ── Viewer ── */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 md:px-12 py-8">
 
+        {/* Desktop category filters — top left */}
+        <div className="hidden md:flex gap-2 mb-6">
+          {CATS.map((c) => (
+            <button
+              key={c.key}
+              onClick={() => changeCat(c.key)}
+              className="text-label cursor-pointer py-2 px-4 transition-all"
+              style={{
+                color: cat === c.key ? '#2C2824' : '#8a8070',
+                background: cat === c.key ? 'rgba(255,255,255,0.6)' : 'transparent',
+                border: `1px solid ${cat === c.key ? 'rgba(180,175,168,0.4)' : 'transparent'}`,
+                borderRadius: '2px',
+              }}
+            >
+              {lang === 'ro' ? c.ro : c.en}
+            </button>
+          ))}
+        </div>
+
         {/* Title row — aligned with grid */}
         <div className="flex items-baseline justify-between mb-6">
           <div>
@@ -214,26 +233,7 @@ function ProjectsContent() {
           </div>
 
           {/* Specs panel (4 cols) — same height as image */}
-          <div className="md:col-span-4 flex flex-col gap-3">
-            {/* Category tabs — desktop only, inside panel */}
-            <div className="hidden md:flex gap-2 p-3" style={{ borderRadius: '4px', background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(16px)', border: '1px solid rgba(180,175,168,0.25)' }}>
-              {CATS.map((c) => (
-                <button
-                  key={c.key}
-                  onClick={() => changeCat(c.key)}
-                  className="flex-1 text-label cursor-pointer py-2 transition-all"
-                  style={{
-                    color: cat === c.key ? '#2C2824' : '#8a8070',
-                    background: cat === c.key ? 'rgba(255,255,255,0.6)' : 'transparent',
-                    border: 'none',
-                    borderRadius: '2px',
-                  }}
-                >
-                  {lang === 'ro' ? c.ro : c.en}
-                </button>
-              ))}
-            </div>
-
+          <div className="md:col-span-4 flex flex-col">
             <div className="p-6 flex-1 flex flex-col justify-between" style={{ borderRadius: '4px', background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(16px)', border: '1px solid rgba(180,175,168,0.25)' }}>
             <div>
               <span className="text-label block mb-3" style={{ color: '#5E574E' }}>{t('SPECIFICAȚII', 'SPECIFICATIONS')}</span>
