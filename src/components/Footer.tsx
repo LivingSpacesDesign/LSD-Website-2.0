@@ -173,7 +173,7 @@ export function Footer() {
         }}
       >
         <span style={{ color: 'var(--color-ash)', fontSize: '12px' }}>
-          &copy; 2025 Living Spaces Design &mdash; Development S.R.L.
+          &copy; 2020 Living Spaces Design &mdash; Development S.R.L.
         </span>
         <a
           href="https://asap-office.com"

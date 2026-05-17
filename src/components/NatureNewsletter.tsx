@@ -103,6 +103,7 @@ export function NatureNewsletter() {
                 >
                   {/* Name */}
                   <input
+                    name="name"
                     type="text"
                     placeholder={t('Nume', 'Name')}
                     className="w-full bg-transparent border-b border-border text-cream text-[15px] pb-3 outline-none focus:border-gold transition-colors placeholder:text-ash"
@@ -110,7 +111,9 @@ export function NatureNewsletter() {
 
                   {/* Email */}
                   <input
+                    name="email"
                     type="email"
+                    required
                     placeholder="Email"
                     className="w-full bg-transparent border-b border-border text-cream text-[15px] pb-3 outline-none focus:border-gold transition-colors placeholder:text-ash"
                   />
