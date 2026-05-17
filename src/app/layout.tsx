@@ -53,7 +53,10 @@ export const metadata: Metadata = {
     images: ['/img/og-image.jpg'],
   },
   icons: {
-    icon: '/icon-dark.png',
+    icon: [
+      { url: '/icon-light.png', media: '(prefers-color-scheme: light)' },
+      { url: '/icon-dark.png', media: '(prefers-color-scheme: dark)' },
+    ],
     apple: '/apple-touch-icon.png',
   },
 };
