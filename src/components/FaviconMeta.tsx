@@ -5,9 +5,24 @@ import { useEffect } from 'react';
 export function FaviconMeta() {
   useEffect(() => {
     const setFavicon = (isDark: boolean) => {
-      const link = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
+      const href = isDark ? '/icon-dark.png' : '/icon-light.png';
+
+      // Try to find existing icon link
+      let link = document.querySelector("link[rel='icon']") as HTMLLinkElement | null;
+
+      if (!link) {
+        // Also try rel="shortcut icon"
+        link = document.querySelector("link[rel='shortcut icon']") as HTMLLinkElement | null;
+      }
+
       if (link) {
-        link.href = isDark ? '/icon-dark.png' : '/icon-light.png';
+        link.href = href;
+      } else {
+        // Create one if none exists
+        const newLink = document.createElement('link');
+        newLink.rel = 'icon';
+        newLink.href = href;
+        document.head.appendChild(newLink);
       }
     };
 
