@@ -80,8 +80,8 @@ function ProjectsContent() {
           borderBottom: '1px solid rgba(180, 175, 168, 0.2)',
         }}
       >
-        {/* Category row */}
-        <div className="flex justify-center gap-8 pt-3 pb-2" style={{ borderBottom: '1px solid rgba(180, 175, 168, 0.2)' }}>
+        {/* Category row — mobile only */}
+        <div className="flex md:hidden justify-center gap-8 pt-3 pb-2" style={{ borderBottom: '1px solid rgba(180, 175, 168, 0.2)' }}>
           {CATS.map((c) => (
             <button
               key={c.key}
@@ -214,41 +214,45 @@ function ProjectsContent() {
           </div>
 
           {/* Specs panel (4 cols) — same height as image */}
-          <div className="md:col-span-4 flex flex-col">
+          <div className="md:col-span-4 flex flex-col gap-3">
+            {/* Category tabs — desktop only, inside panel */}
+            <div className="hidden md:flex gap-2 p-3" style={{ borderRadius: '4px', background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(16px)', border: '1px solid rgba(180,175,168,0.25)' }}>
+              {CATS.map((c) => (
+                <button
+                  key={c.key}
+                  onClick={() => changeCat(c.key)}
+                  className="flex-1 text-label cursor-pointer py-2 transition-all"
+                  style={{
+                    color: cat === c.key ? '#2C2824' : '#8a8070',
+                    background: cat === c.key ? 'rgba(255,255,255,0.6)' : 'transparent',
+                    border: 'none',
+                    borderRadius: '2px',
+                  }}
+                >
+                  {lang === 'ro' ? c.ro : c.en}
+                </button>
+              ))}
+            </div>
+
             <div className="p-6 flex-1 flex flex-col justify-between" style={{ borderRadius: '4px', background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(16px)', border: '1px solid rgba(180,175,168,0.25)' }}>
             <div>
-              <span className="text-label block mb-5" style={{ color: '#5E574E' }}>{t('SPECIFICAȚII', 'SPECIFICATIONS')}</span>
-              <div className="space-y-5">
-                {project.specs.teren && (
-                  <div>
-                    <span className="block font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{t('Teren', 'Land')}</span>
-                    <span className="text-display text-[24px] block mt-1" style={{ color: '#2C2824' }}>{project.specs.teren}</span>
+              <span className="text-label block mb-3" style={{ color: '#5E574E' }}>{t('SPECIFICAȚII', 'SPECIFICATIONS')}</span>
+              <div className="space-y-0">
+                {[
+                  project.specs.teren ? { label: t('Teren', 'Land'), value: project.specs.teren } : null,
+                  project.specs.casa ? { label: t('Casă', 'House'), value: project.specs.casa } : null,
+                  project.specs.util ? { label: t('Util', 'Usable'), value: project.specs.util } : null,
+                  project.specs.regim ? { label: t('Regim', 'Floors'), value: project.specs.regim } : null,
+                  project.specs.dormitoare ? { label: t('Dormitoare', 'Bedrooms'), value: project.specs.dormitoare } : null,
+                ].filter(Boolean).map((spec, i, arr) => (
+                  <div key={spec!.label}>
+                    <div className="flex justify-between items-baseline py-4">
+                      <span className="font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{spec!.label}</span>
+                      <span className="text-display text-[22px]" style={{ color: '#2C2824' }}>{spec!.value}</span>
+                    </div>
+                    {i < arr.length - 1 && <div style={{ height: '1px', background: 'rgba(180,175,168,0.25)' }} />}
                   </div>
-                )}
-                {project.specs.casa && (
-                  <div>
-                    <span className="block font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{t('Casă', 'House')}</span>
-                    <span className="text-display text-[24px] block mt-1" style={{ color: '#2C2824' }}>{project.specs.casa}</span>
-                  </div>
-                )}
-                {project.specs.util && (
-                  <div>
-                    <span className="block font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{t('Util', 'Usable')}</span>
-                    <span className="text-display text-[24px] block mt-1" style={{ color: '#2C2824' }}>{project.specs.util}</span>
-                  </div>
-                )}
-                {project.specs.regim && (
-                  <div>
-                    <span className="block font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{t('Regim', 'Floors')}</span>
-                    <span className="text-display text-[24px] block mt-1" style={{ color: '#2C2824' }}>{project.specs.regim}</span>
-                  </div>
-                )}
-                {project.specs.dormitoare && (
-                  <div>
-                    <span className="block font-mono text-[10px] tracking-widest uppercase" style={{ color: '#9C958A' }}>{t('Dormitoare', 'Bedrooms')}</span>
-                    <span className="text-display text-[24px] block mt-1" style={{ color: '#2C2824' }}>{project.specs.dormitoare}</span>
-                  </div>
-                )}
+                ))}
               </div>
 
             </div>
