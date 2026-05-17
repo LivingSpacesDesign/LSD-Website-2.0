@@ -13,8 +13,8 @@ export function Hero() {
         <Image
           src="/img/hero-light_compressed.jpg"
           alt={t(
-            'Dezvoltare rezidențială premium Moara Vlăsiei',
-            'Premium residential development Moara Vlăsiei',
+            'Dezvoltare rezidențială premium Căciulati',
+            'Premium residential development Căciulati',
           )}
           fill
           className="object-cover"
@@ -49,15 +49,15 @@ export function Hero() {
         {/* Description */}
         <p className="text-stone text-[15px] max-w-md leading-relaxed">
           {t(
-            'Din 2010, creăm spații rezidențiale care transformă modul în care trăiești. Moara Vlăsiei, la 20 de minute de București.',
-            'Since 2010, we create residential spaces that transform the way you live. Moara Vlăsiei, 20 minutes from Bucharest.',
+            'Din 2010, creăm spații rezidențiale care transformă modul în care trăiești. Căciulati, la 20 de minute de București.',
+            'Since 2010, we create residential spaces that transform the way you live. Căciulati, 20 minutes from Bucharest.',
           )}
         </p>
       </div>
 
       {/* Location widget — desktop, bottom-right */}
       <a
-        href="https://maps.google.com/?q=44.386,26.194"
+        href="https://maps.app.goo.gl/R1heYFauwnKY8TkW7"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex absolute bottom-[120px] right-12 items-center gap-4 group min-h-[44px]"
@@ -66,8 +66,8 @@ export function Hero() {
           <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
         </svg>
         <div>
-          <p className="text-cream text-[14px] group-hover:text-gold transition-colors">Moara Vlăsiei, Ilfov</p>
-          <p className="font-mono text-ash text-[12px] group-hover:text-stone transition-colors">44.386°N · 26.194°E</p>
+          <p className="text-cream text-[14px] group-hover:text-gold transition-colors">Căciulati, Ilfov</p>
+          <p className="font-mono text-ash text-[12px] group-hover:text-stone transition-colors">44.567°N · 26.139°E</p>
         </div>
       </a>
 

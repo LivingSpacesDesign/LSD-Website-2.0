@@ -44,7 +44,7 @@ export const projects: Project[] = [
     sold: false,
     featured: true,
     forSale: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: {
       teren: '1722 m²',
       casa: '475 m²',
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     team: 'LSD',
     description: {
       ro: 'Casa HH este cel mai ambițios proiect din portofoliul nostru — o rezidență de 475 m² construiți pe un teren generos de 1722 m², în inima Moarii Vlăsiei. Arhitectura contemporană cu linii curate și volume generoase creează un dialog natural între interior și peisajul înconjurător. Cu 5 dormitoare, regim P+1 și o suprafață utilă de 553 m², Casa HH oferă spațiu pentru o familie mare fără a sacrifica intimitatea. Grădina include un studio independent, bucătărie exterioară, fire pit, pistă de alergare, zonă de yoga și fitness, plus un home office separat — totul gândit pentru un mod de viață complet, la doar 20 de minute de centrul Bucureștiului.',
-      en: 'Casa HH is the most ambitious project in our portfolio — a 475 sqm residence on a generous 1722 sqm plot in the heart of Moara Vlăsiei. The contemporary architecture with clean lines and generous volumes creates a natural dialogue between interior and surrounding landscape. With 5 bedrooms, P+1 configuration and 553 sqm of usable space, Casa HH provides room for a large family without sacrificing privacy. The garden includes an independent studio, outdoor kitchen, fire pit, running track, yoga & fitness area, plus a separate home office — all designed for a complete lifestyle, just 20 minutes from central Bucharest.',
+      en: 'Casa HH is the most ambitious project in our portfolio — a 475 sqm residence on a generous 1722 sqm plot in the heart of Căciulati. The contemporary architecture with clean lines and generous volumes creates a natural dialogue between interior and surrounding landscape. With 5 bedrooms, P+1 configuration and 553 sqm of usable space, Casa HH provides room for a large family without sacrificing privacy. The garden includes an independent studio, outdoor kitchen, fire pit, running track, yoga & fitness area, plus a separate home office — all designed for a complete lifestyle, just 20 minutes from central Bucharest.',
     },
     cover: '/img/casa-hh_compressed.jpg',
     images: [
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: 'concept',
     status: { ro: 'Construită · Vândută', en: 'Built · Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: {
       teren: '861 m²',
       casa: '350 m²',
@@ -81,8 +81,8 @@ export const projects: Project[] = [
     },
     team: 'LSD × Metrick Architecture',
     description: {
-      ro: 'Casa PH a fost primul proiect Living Spaces Design — o rezidență de 350 m² pe un teren de 861 m² pe Strada Paris din Moara Vlăsiei. Colaborarea cu Metrick Architecture a produs un proiect care combină volumele contemporane cu materiale naturale — lemn, sticlă și beton aparent. Planul în L creează o curte interioară intimă, protejată de vânt, cu vegetație matură și zone de relaxare. La parter, spațiul de living open-plan cu bucătărie și dining se deschide complet către grădină prin pereți de sticlă glisanți. Etajul adăpostește dormitoarele și un studiu privat, fiecare cu ferestre generoase orientate strategic pentru lumina naturală.',
-      en: 'Casa PH was the first Living Spaces Design project — a 350 sqm residence on an 861 sqm plot on Strada Paris in Moara Vlăsiei. The collaboration with Metrick Architecture produced a project that combines contemporary volumes with natural materials — wood, glass and exposed concrete. The L-shaped plan creates an intimate internal courtyard, sheltered from wind, with mature vegetation and relaxation areas. On the ground floor, the open-plan living space with kitchen and dining opens fully to the garden through sliding glass walls. The upper floor houses bedrooms and a private study, each with generous windows strategically oriented for natural light.',
+      ro: 'Casa PH a fost primul proiect Living Spaces Design — o rezidență de 350 m² pe un teren de 861 m² pe Strada Paris din Căciulati. Colaborarea cu Metrick Architecture a produs un proiect care combină volumele contemporane cu materiale naturale — lemn, sticlă și beton aparent. Planul în L creează o curte interioară intimă, protejată de vânt, cu vegetație matură și zone de relaxare. La parter, spațiul de living open-plan cu bucătărie și dining se deschide complet către grădină prin pereți de sticlă glisanți. Etajul adăpostește dormitoarele și un studiu privat, fiecare cu ferestre generoase orientate strategic pentru lumina naturală.',
+      en: 'Casa PH was the first Living Spaces Design project — a 350 sqm residence on an 861 sqm plot on Strada Paris in Căciulati. The collaboration with Metrick Architecture produced a project that combines contemporary volumes with natural materials — wood, glass and exposed concrete. The L-shaped plan creates an intimate internal courtyard, sheltered from wind, with mature vegetation and relaxation areas. On the ground floor, the open-plan living space with kitchen and dining opens fully to the garden through sliding glass walls. The upper floor houses bedrooms and a private study, each with generous windows strategically oriented for natural light.',
     },
     cover: '/img/casa-ph.jpg',
     images: [
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     status: { ro: 'Concept · Disponibil', en: 'Concept · Available' },
     sold: false,
     forSale: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: {
       teren: '1500 m²',
       casa: '350 m²',
@@ -144,7 +144,7 @@ export const projects: Project[] = [
     status: { ro: 'De Vânzare', en: 'For Sale' },
     sold: false,
     forSale: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '500 m²', casa: '178 m²', regim: 'P' },
     team: 'LSD',
     description: {
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '500 m²', casa: '136 m²', regim: 'P' },
     team: 'LSD',
     description: {
@@ -196,7 +196,7 @@ export const projects: Project[] = [
     status: { ro: 'De Vânzare', en: 'For Sale' },
     sold: false,
     forSale: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '500 m²', casa: '136 m²', regim: 'P' },
     team: 'LSD',
     description: {
@@ -221,12 +221,12 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '691 m²', casa: '171 m²', regim: 'P' },
     team: 'LSD',
     description: {
-      ro: 'Casa 615 a fost proiectată pe un lot de 691 m² din Moara Vlăsiei, cu o suprafață construită de 171 m² exclusiv la parter. Proiectul a răspuns dorinței proprietarului de a avea o locuință fără scări, compactă dar generoasă, cu accent pe zona de zi. Living-ul dublu, cu tavan înalt și ferestre pe două laturi, devine centrul casei — luminat natural toată ziua. Dormitoarele sunt separate de zona de zi printr-un coridor cu dressinguri integrate, asigurând intimitate completă. Grădina de 520 m² include terasă acoperită, gazon și spații pentru plantări.',
-      en: 'Casa 615 was designed on a 691 sqm plot in Moara Vlăsiei, with 171 sqm of built area exclusively at ground level. The project responded to the owner\'s desire for a stairless home, compact yet generous, with emphasis on the living area. The double living room with high ceilings and windows on two sides becomes the center of the house — naturally lit throughout the day. Bedrooms are separated from the living area by a corridor with integrated wardrobes, ensuring complete privacy. The 520 sqm garden includes a covered terrace, lawn and planting areas.',
+      ro: 'Casa 615 a fost proiectată pe un lot de 691 m² din Căciulati, cu o suprafață construită de 171 m² exclusiv la parter. Proiectul a răspuns dorinței proprietarului de a avea o locuință fără scări, compactă dar generoasă, cu accent pe zona de zi. Living-ul dublu, cu tavan înalt și ferestre pe două laturi, devine centrul casei — luminat natural toată ziua. Dormitoarele sunt separate de zona de zi printr-un coridor cu dressinguri integrate, asigurând intimitate completă. Grădina de 520 m² include terasă acoperită, gazon și spații pentru plantări.',
+      en: 'Casa 615 was designed on a 691 sqm plot in Căciulati, with 171 sqm of built area exclusively at ground level. The project responded to the owner\'s desire for a stairless home, compact yet generous, with emphasis on the living area. The double living room with high ceilings and windows on two sides becomes the center of the house — naturally lit throughout the day. Bedrooms are separated from the living area by a corridor with integrated wardrobes, ensuring complete privacy. The 520 sqm garden includes a covered terrace, lawn and planting areas.',
     },
     cover: '/img/c615/render_compressed.jpg',
     images: [
@@ -242,7 +242,7 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '700 m²', casa: '200 m²', regim: 'P' },
     team: 'LSD',
     description: {
@@ -263,7 +263,7 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '870 m²', casa: '260 m²', regim: 'P+1' },
     team: 'LSD',
     description: {
@@ -284,7 +284,7 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '361 m²', casa: '200 m²', regim: 'P' },
     team: 'LSD × Metrick Architecture',
     description: {
@@ -310,7 +310,7 @@ export const projects: Project[] = [
     category: 'personalizat',
     status: { ro: 'Vândută', en: 'Sold' },
     sold: true,
-    location: 'Moara Vlăsiei, Ilfov',
+    location: 'Căciulati, Ilfov',
     specs: { teren: '361 m²', casa: '133 m²', regim: 'P' },
     team: 'LSD × Metrick Architecture',
     description: {

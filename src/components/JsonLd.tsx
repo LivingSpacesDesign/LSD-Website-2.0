@@ -10,15 +10,15 @@ export function JsonLd() {
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Str. Paris, nr. 28',
-      addressLocality: 'Moara Vlăsiei',
+      addressLocality: 'Căciulati',
       addressRegion: 'Ilfov',
       postalCode: '077105',
       addressCountry: 'RO',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 44.386,
-      longitude: 26.194,
+      latitude: 44.567,
+      longitude: 26.139,
     },
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
@@ -27,7 +27,7 @@ export function JsonLd() {
       closes: '18:00',
     },
     image: 'https://livingspacesdesign.ro/img/og-image.jpg',
-    description: 'Dezvoltator rezidențial premium în Moara Vlăsiei — case concept și case personalizate.',
+    description: 'Dezvoltator rezidențial premium în Căciulati — case concept și case personalizate.',
     sameAs: [
       'https://www.instagram.com/lsd_livingspacesdesign/',
       'https://www.facebook.com/LSDLivingSpacesDesign',

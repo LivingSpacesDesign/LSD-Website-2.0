@@ -46,7 +46,7 @@ export default function PoliticaConfidentialitatePage() {
         <h2>1. Date de identificare operator</h2>
         <p>
           Operatorul de date cu caracter personal este <strong>LIVING SPACES DESIGN - DEVELOPMENT S.R.L.</strong>,
-          cu sediul în Moara Vlăsiei, Str. Paris, nr. 28, jud. Ilfov, România,
+          cu sediul în Căciulati, Str. Paris, nr. 28, jud. Ilfov, România,
           înregistrată la Registrul Comerțului sub nr. J23/3224/2021,
           CIF RO44325772.
         </p>
@@ -142,7 +142,7 @@ export default function PoliticaConfidentialitatePage() {
         <ul>
           <li>Email: <a href="mailto:project2020@livingspacesdesign.ro">project2020@livingspacesdesign.ro</a></li>
           <li>Telefon: <a href="tel:+40745760829">0745 760 829</a></li>
-          <li>Adresă: Moara Vlăsiei, Str. Paris, nr. 28, jud. Ilfov</li>
+          <li>Adresă: Căciulati, Str. Paris, nr. 28, jud. Ilfov</li>
         </ul>
       </div>
 

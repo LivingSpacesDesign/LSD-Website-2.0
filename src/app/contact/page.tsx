@@ -1,27 +1,4 @@
-'use client';
-
-import { useState } from 'react';
-
-const INTEREST_OPTIONS = [
-  'Case Concept',
-  'Case Personalizate',
-  'Casa HH',
-  'Altceva',
-] as const;
-
 export default function ContactPage() {
-  const [interest, setInterest] = useState<string>('');
-  const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus('sending');
-    const fd = new FormData(e.currentTarget);
-    console.log('Contact:', { name: fd.get('name'), phone: fd.get('phone'), email: fd.get('email'), interest, message: fd.get('message') });
-    await new Promise((r) => setTimeout(r, 800));
-    setStatus('sent');
-  }
-
   return (
     <div className="relative min-h-screen flex flex-col">
       {/* Video background — fixed */}
@@ -37,33 +14,30 @@ export default function ContactPage() {
         className="relative z-10 flex-1 flex items-center"
         style={{ paddingTop: 'var(--header-h)' }}
       >
-        <div className="w-full max-w-[1100px] mx-auto px-6 md:px-12 py-8">
+        <div className="w-full max-w-[800px] mx-auto px-6 md:px-12 py-8">
 
-          {/* 3-column layout: info | form | quick actions */}
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.8fr_1fr] gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 
             {/* ── Col 1: Info ── */}
-            <div className="hidden lg:flex flex-col justify-between h-full">
-              <div>
-                <p className="text-display text-[28px] text-cream leading-tight">
-                  Hai să<br />
-                  <span className="text-editorial text-gold">vorbim.</span>
-                </p>
-                <div className="divider-gold mt-6 mb-8" />
+            <div>
+              <p className="text-display text-[28px] text-cream leading-tight">
+                Hai să<br />
+                <span className="text-editorial text-gold">vorbim.</span>
+              </p>
+              <div className="divider-gold mt-6 mb-8" />
 
-                <div className="space-y-5">
-                  <div>
-                    <span className="text-label text-stone block mb-1">TELEFON</span>
-                    <a href="tel:+40745760829" className="text-cream text-[15px] hover-gold transition-colors">0745 760 829</a>
-                  </div>
-                  <div>
-                    <span className="text-label text-stone block mb-1">EMAIL</span>
-                    <a href="mailto:project2020@livingspacesdesign.ro" className="text-cream text-[15px] hover-gold transition-colors break-all">project2020@livingspacesdesign.ro</a>
-                  </div>
-                  <div>
-                    <span className="text-label text-stone block mb-1">ADRESĂ</span>
-                    <span className="text-cream text-[15px]">Moara Vlăsiei, Str. Paris,<br />nr. 28, jud. Ilfov</span>
-                  </div>
+              <div className="space-y-5">
+                <div>
+                  <span className="text-label text-stone block mb-1">TELEFON</span>
+                  <a href="tel:+40745760829" className="text-cream text-[15px] hover-gold transition-colors">0745 760 829</a>
+                </div>
+                <div>
+                  <span className="text-label text-stone block mb-1">EMAIL</span>
+                  <a href="mailto:project2020@livingspacesdesign.ro" className="text-cream text-[15px] hover-gold transition-colors break-all">project2020@livingspacesdesign.ro</a>
+                </div>
+                <div>
+                  <span className="text-label text-stone block mb-1">ADRESĂ</span>
+                  <span className="text-cream text-[15px]">Căciulati, Str. Paris,<br />nr. 28, jud. Ilfov</span>
                 </div>
               </div>
 
@@ -76,82 +50,9 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* ── Col 2: Form (center, prominent) ── */}
-            <div
-              className="bg-card/60 backdrop-blur-sm border border-border"
-              style={{ padding: 'clamp(24px, 4vw, 40px)', borderRadius: '2px' }}
-            >
-              {status === 'sent' ? (
-                <div className="text-center py-12 animate-fade-up">
-                  <p className="text-display text-gold text-[28px] mb-3">Mulțumim!</p>
-                  <p className="text-stone text-[15px]">Te vom contacta în cel mai scurt timp.</p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
-                    <input name="name" type="text" required placeholder="Nume" className="contact-input col-span-1" />
-                    <input name="phone" type="tel" placeholder="Telefon" className="contact-input col-span-1" />
-                  </div>
-                  <input name="email" type="email" required placeholder="Email" className="contact-input" />
-
-                  {/* Interest pills */}
-                  <div style={{ padding: '16px 0 8px' }}>
-                    <span className="text-label text-stone block mb-3">INTERES</span>
-                    <div className="flex flex-wrap gap-2">
-                      {INTEREST_OPTIONS.map((opt) => (
-                        <button
-                          key={opt}
-                          type="button"
-                          onClick={() => setInterest(interest === opt ? '' : opt)}
-                          className="cursor-pointer text-[13px] transition-all"
-                          style={{
-                            padding: '10px 16px',
-                            minHeight: '44px',
-                            border: `1px solid ${interest === opt ? 'var(--color-gold)' : 'var(--color-border)'}`,
-                            color: interest === opt ? 'var(--color-gold)' : 'var(--color-stone)',
-                            background: interest === opt ? 'rgba(196, 168, 124, 0.1)' : 'transparent',
-                            borderRadius: '2px',
-                          }}
-                        >
-                          {opt}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <textarea
-                    name="message"
-                    placeholder="Mesaj"
-                    required
-                    className="contact-input"
-                    style={{ minHeight: '80px', resize: 'none' }}
-                  />
-
-                  <button
-                    type="submit"
-                    disabled={status === 'sending'}
-                    className="w-full cursor-pointer mt-6"
-                    style={{
-                      padding: '14px',
-                      background: 'var(--color-gold)',
-                      color: 'var(--color-deep)',
-                      border: 'none',
-                      fontSize: '12px',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.2em',
-                      transition: 'background 0.3s ease',
-                      opacity: status === 'sending' ? 0.7 : 1,
-                    }}
-                  >
-                    {status === 'sending' ? 'Se trimite...' : 'Trimite mesajul'}
-                  </button>
-                </form>
-              )}
-            </div>
-
-            {/* ── Col 3: Quick actions ── */}
+            {/* ── Col 2: Quick actions ── */}
             <div className="flex flex-col gap-4">
-              {/* WhatsApp — big CTA */}
+              {/* WhatsApp */}
               <a
                 href="https://wa.me/40745760829"
                 target="_blank"
@@ -198,7 +99,7 @@ export default function ContactPage() {
 
               {/* Location */}
               <a
-                href="https://maps.google.com/?q=44.386,26.194"
+                href="https://maps.app.goo.gl/R1heYFauwnKY8TkW7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 border border-border p-5 hover:border-gold transition-colors"
@@ -208,48 +109,14 @@ export default function ContactPage() {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" />
                 </svg>
                 <div>
-                  <span className="text-cream text-[14px] group-hover:text-gold transition-colors">Moara Vlăsiei</span>
-                  <span className="font-mono text-ash text-[11px] block mt-0.5">44.386°N · 26.194°E</span>
+                  <span className="text-cream text-[14px] group-hover:text-gold transition-colors">Căciulati</span>
+                  <span className="font-mono text-ash text-[11px] block mt-0.5">44.567°N · 26.139°E</span>
                 </div>
               </a>
-
-              {/* Mobile-only info */}
-              <div className="lg:hidden border border-border p-5" style={{ borderRadius: '2px' }}>
-                <span className="text-label text-stone block mb-3">EMAIL</span>
-                <a href="mailto:project2020@livingspacesdesign.ro" className="text-cream text-[14px] hover-gold transition-colors break-all">
-                  project2020@livingspacesdesign.ro
-                </a>
-                <div className="divider mt-4 mb-3" />
-                <span style={{ color: 'var(--color-ash)', fontSize: '11px' }}>
-                  LIVING SPACES DESIGN - DEVELOPMENT S.R.L.<br />
-                  CIF: RO44325772 · J23/3224/2021
-                </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <style>{`
-        .contact-input {
-          background: transparent;
-          border: none;
-          border-bottom: 1px solid var(--color-border);
-          padding: 16px 0;
-          color: var(--color-cream);
-          font-size: 16px;
-          font-family: var(--font-sans);
-          width: 100%;
-          outline: none;
-          transition: border-color 0.3s ease;
-        }
-        .contact-input::placeholder {
-          color: var(--color-ash);
-        }
-        .contact-input:focus {
-          border-bottom-color: var(--color-gold);
-        }
-      `}</style>
     </div>
   );
 }

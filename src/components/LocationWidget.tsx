@@ -16,7 +16,7 @@ export function LocationWidget() {
           <div className="md:col-span-4">
             <ScrollReveal>
               <a
-                href="https://maps.google.com/?q=44.386,26.194"
+                href="https://maps.app.goo.gl/R1heYFauwnKY8TkW7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block"
@@ -28,10 +28,10 @@ export function LocationWidget() {
                   <span className="text-label text-gold">{t('LOCAȚIE', 'LOCATION')}</span>
                 </div>
                 <p className="text-cream text-[16px] group-hover:text-gold transition-colors">
-                  Moara Vlăsiei, Ilfov
+                  Căciulati, Ilfov
                 </p>
                 <p className="font-mono text-ash text-[13px] mt-1 group-hover:text-stone transition-colors">
-                  44.386°N &nbsp; 26.194°E
+                  44.567°N &nbsp; 26.139°E
                 </p>
                 <p className="text-stone text-[14px] mt-2">
                   {t('20 min de București', '20 min from Bucharest')}

@@ -47,7 +47,7 @@ export default function TermeniPage() {
         <p>
           Site-ul <strong>livingspacesdesign.ro</strong> este operat de{' '}
           <strong>LIVING SPACES DESIGN - DEVELOPMENT S.R.L.</strong>, cu sediul în
-          Moara Vlăsiei, Str. Paris, nr. 28, jud. Ilfov, România, înregistrată la
+          Căciulati, Str. Paris, nr. 28, jud. Ilfov, România, înregistrată la
           Registrul Comerțului sub nr. J23/3224/2021, CIF RO44325772.
         </p>
         <p>
@@ -135,7 +135,7 @@ export default function TermeniPage() {
         <ul>
           <li>Email: <a href="mailto:project2020@livingspacesdesign.ro">project2020@livingspacesdesign.ro</a></li>
           <li>Telefon: <a href="tel:+40745760829">0745 760 829</a></li>
-          <li>Adresă: Moara Vlăsiei, Str. Paris, nr. 28, jud. Ilfov</li>
+          <li>Adresă: Căciulati, Str. Paris, nr. 28, jud. Ilfov</li>
         </ul>
       </div>
 

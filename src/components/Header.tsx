@@ -56,9 +56,9 @@ export function Header() {
           href="/"
           className="relative z-50 shrink-0 w-[140px]"
           style={{
-            fontSize: '12px',
-            letterSpacing: '0.3em',
-            fontVariant: 'small-caps',
+            fontSize: '18px',
+            letterSpacing: '0.35em',
+            fontWeight: 500,
             color: textColor,
             textDecoration: 'none',
             transition: 'color 0.4s ease',
@@ -102,17 +102,6 @@ export function Header() {
             <span style={{ color: lang === 'en' ? textColor : mutedColor }}>EN</span>
           </button>
 
-          <a
-            href="tel:+40745760829"
-            className="text-label hover-gold"
-            style={{
-              color: isLightPage ? '#2C2824' : 'var(--color-gold)',
-              textDecoration: 'none',
-              transition: 'color 0.4s ease',
-            }}
-          >
-            0745 760 829
-          </a>
         </div>
 
         {/* Right: Hamburger (mobile only) */}
@@ -209,6 +198,26 @@ export function Header() {
           </button>
         </nav>
       </div>
+
+      {/* Fixed call button — right side */}
+      <a
+        href="tel:+40745760829"
+        aria-label="Sună"
+        className="fixed z-50 flex items-center justify-center hover-lift"
+        style={{
+          right: '24px',
+          bottom: '24px',
+          width: '56px',
+          height: '56px',
+          borderRadius: '50%',
+          background: 'var(--color-gold)',
+          boxShadow: '0 4px 20px rgba(196, 168, 124, 0.3)',
+        }}
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-deep)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+        </svg>
+      </a>
 
       <style>{`
         :root {

@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Proiecte | LSD — Living Spaces Design',
   description:
-    'Portofoliu de case concept și personalizate în Moara Vlăsiei — proiecte rezidențiale premium de la Living Spaces Design.',
+    'Portofoliu de case concept și personalizate în Căciulati — proiecte rezidențiale premium de la Living Spaces Design.',
   openGraph: {
     title: 'Proiecte | LSD — Living Spaces Design',
     description:
-      'Portofoliu de case concept și personalizate în Moara Vlăsiei — proiecte rezidențiale premium de la Living Spaces Design.',
+      'Portofoliu de case concept și personalizate în Căciulati — proiecte rezidențiale premium de la Living Spaces Design.',
     url: 'https://livingspacesdesign.ro/proiecte',
     siteName: 'Living Spaces Design',
     locale: 'ro_RO',

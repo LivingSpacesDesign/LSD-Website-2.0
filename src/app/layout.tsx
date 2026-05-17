@@ -23,7 +23,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'LSD | Living Spaces Design',
   description:
-    'Dezvoltator rezidential premium in Moara Vlasiei. Case si vile de lux proiectate cu atentie la detalii, materiale naturale si design contemporan.',
+    'Dezvoltator rezidential premium in Căciulati. Case si vile de lux proiectate cu atentie la detalii, materiale naturale si design contemporan.',
   metadataBase: new URL('https://livingspacesdesign.ro'),
   alternates: {
     canonical: '/',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LSD | Living Spaces Design',
     description:
-      'Dezvoltator rezidential premium in Moara Vlasiei. Case si vile de lux proiectate cu atentie la detalii, materiale naturale si design contemporan.',
+      'Dezvoltator rezidential premium in Căciulati. Case si vile de lux proiectate cu atentie la detalii, materiale naturale si design contemporan.',
     url: 'https://livingspacesdesign.ro',
     siteName: 'Living Spaces Design',
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LSD | Living Spaces Design',
     description:
-      'Dezvoltator rezidential premium in Moara Vlasiei.',
+      'Dezvoltator rezidential premium in Căciulati.',
     images: ['/img/og-image.jpg'],
   },
   icons: {

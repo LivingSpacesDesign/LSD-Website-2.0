@@ -66,7 +66,7 @@ export function Approach() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
-                    {t('Teren inclus în Moara Vlăsiei', 'Land included in Moara Vlăsiei')}
+                    {t('Teren inclus în Căciulati', 'Land included in Căciulati')}
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
@@ -90,19 +90,13 @@ export function Approach() {
               <ScrollReveal delay={300}>
                 <div className="text-right">
                   <span className="text-display text-gold text-[64px] leading-none">3</span>
-                  <p className="text-label text-stone mt-2">{t('PROIECTE CONCEPT', 'CONCEPT PROJECTS')}</p>
+                  <p className="text-label mt-2" style={{ color: 'var(--color-cream)' }}>{t('PROIECTE CONCEPT', 'CONCEPT PROJECTS')}</p>
                 </div>
               </ScrollReveal>
               <ScrollReveal delay={400}>
                 <div className="text-right">
                   <span className="text-display text-gold text-[64px] leading-none">1722</span>
-                  <p className="text-label text-stone mt-2">M² {t('CEL MAI MARE LOT', 'LARGEST PLOT')}</p>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal delay={500}>
-                <div className="text-right">
-                  <span className="text-display text-cream text-[22px]">{t('De la', 'From')} P+1</span>
-                  <p className="text-label text-stone mt-2">{t('REGIM DE ÎNĂLȚIME', 'HEIGHT REGIME')}</p>
+                  <p className="text-label mt-2" style={{ color: 'var(--color-cream)' }}>M² {t('CEL MAI MARE LOT', 'LARGEST PLOT')}</p>
                 </div>
               </ScrollReveal>
             </div>

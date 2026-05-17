@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Contact | LSD — Living Spaces Design',
   description:
-    'Contactează Living Spaces Design — telefon, email, WhatsApp. Programează o întâlnire pentru proiectul tău rezidențial în Moara Vlăsiei.',
+    'Contactează Living Spaces Design — telefon, email, WhatsApp. Programează o întâlnire pentru proiectul tău rezidențial în Căciulati.',
   openGraph: {
     title: 'Contact | LSD — Living Spaces Design',
     description:
-      'Contactează Living Spaces Design — telefon, email, WhatsApp. Programează o întâlnire pentru proiectul tău rezidențial în Moara Vlăsiei.',
+      'Contactează Living Spaces Design — telefon, email, WhatsApp. Programează o întâlnire pentru proiectul tău rezidențial în Căciulati.',
     url: 'https://livingspacesdesign.ro/contact',
     siteName: 'Living Spaces Design',
     locale: 'ro_RO',

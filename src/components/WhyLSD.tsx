@@ -24,8 +24,8 @@ const REASONS = [
     num: '03',
     title: { ro: 'Locație premium', en: 'Premium location' },
     desc: {
-      ro: 'Moara Vlăsiei — la 20 de minute de București, înconjurat de natură, departe de agitația urbană.',
-      en: 'Moara Vlăsiei — 20 minutes from Bucharest, surrounded by nature, away from urban chaos.',
+      ro: 'Căciulati — la 20 de minute de București, înconjurat de natură, departe de agitația urbană.',
+      en: 'Căciulati — 20 minutes from Bucharest, surrounded by nature, away from urban chaos.',
     },
   },
   {

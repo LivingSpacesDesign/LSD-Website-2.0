@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useLang } from '@/lib/useLang';
 import { ScrollReveal } from '@/components/ScrollReveal';
+import { subscribeNewsletter } from '@/app/actions/newsletter';
 
 const INTERESTS = [
   { ro: 'Case Concept', en: 'Concept Houses' },
@@ -15,6 +16,7 @@ const INTERESTS = [
 export function NatureNewsletter() {
   const { t } = useLang();
   const [selectedInterest, setSelectedInterest] = useState<string | null>(null);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done'>('idle');
 
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
@@ -22,7 +24,7 @@ export function NatureNewsletter() {
       <div className="absolute inset-0">
         <Image
           src="/img/hero-bg_compressed.jpg"
-          alt={t('Vedere aeriană Moara Vlăsiei', 'Aerial view Moara Vlăsiei')}
+          alt={t('Vedere aeriană Căciulati', 'Aerial view Căciulati')}
           fill
           className="object-cover"
         />
@@ -88,7 +90,17 @@ export function NatureNewsletter() {
                   )}
                 </p>
 
-                <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+                <form
+                  className="space-y-5"
+                  onSubmit={async (e) => {
+                    e.preventDefault();
+                    setStatus('sending');
+                    const fd = new FormData(e.currentTarget);
+                    if (selectedInterest) fd.append('interest', selectedInterest);
+                    await subscribeNewsletter(fd);
+                    setStatus('done');
+                  }}
+                >
                   {/* Name */}
                   <input
                     type="text"
@@ -133,12 +145,20 @@ export function NatureNewsletter() {
                   </div>
 
                   {/* Submit */}
-                  <button
-                    type="submit"
-                    className="w-full bg-gold text-deep py-4 text-sm uppercase tracking-widest hover:bg-gold-light transition-colors cursor-pointer mt-4"
-                  >
-                    {t('Abonează-te', 'Subscribe')}
-                  </button>
+                  {status === 'done' ? (
+                    <p className="text-gold text-center py-4 text-sm uppercase tracking-widest mt-4">
+                      {t('Mulțumim! Te ținem la curent.', 'Thanks! We\'ll keep you posted.')}
+                    </p>
+                  ) : (
+                    <button
+                      type="submit"
+                      disabled={status === 'sending'}
+                      className="w-full bg-gold text-deep py-4 text-sm uppercase tracking-widest hover:bg-gold-light transition-colors cursor-pointer mt-4"
+                      style={{ opacity: status === 'sending' ? 0.7 : 1 }}
+                    >
+                      {status === 'sending' ? '...' : t('Abonează-te', 'Subscribe')}
+                    </button>
+                  )}
                 </form>
               </div>
             </ScrollReveal>

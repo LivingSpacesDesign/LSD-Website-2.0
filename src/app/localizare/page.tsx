@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Localizare | LSD — Living Spaces Design',
   description:
-    'Moara Vlăsiei, Ilfov — la 20 de minute de București. Vizitează locația proiectelor Living Spaces Design.',
+    'Căciulati, Ilfov — la 20 de minute de București. Vizitează locația proiectelor Living Spaces Design.',
   openGraph: {
     title: 'Localizare | LSD — Living Spaces Design',
     description:
-      'Moara Vlăsiei, Ilfov — la 20 de minute de București. Vizitează locația proiectelor Living Spaces Design.',
+      'Căciulati, Ilfov — la 20 de minute de București. Vizitează locația proiectelor Living Spaces Design.',
     url: 'https://livingspacesdesign.ro/localizare',
     siteName: 'Living Spaces Design',
     locale: 'ro_RO',
@@ -51,7 +51,7 @@ export default function LocalizarePage() {
           }}
         >
           <a
-            href="https://www.google.com/maps?q=44.386,26.194"
+            href="https://maps.app.goo.gl/R1heYFauwnKY8TkW7"
             target="_blank"
             rel="noopener noreferrer"
             style={{
