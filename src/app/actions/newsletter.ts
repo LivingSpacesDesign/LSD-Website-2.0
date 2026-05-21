@@ -1,6 +1,7 @@
 'use server';
 
 import { put, list } from '@vercel/blob';
+import { Resend } from 'resend';
 
 interface Subscriber {
   name: string;
@@ -49,6 +50,26 @@ export async function subscribeNewsletter(formData: FormData) {
     addRandomSuffix: false,
     contentType: 'application/json',
   });
+
+  // Notify via email
+  if (process.env.RESEND_API_KEY) {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    await resend.emails.send({
+      from: process.env.RESEND_FROM_EMAIL || 'LSD Newsletter <noreply@resend.dev>',
+      to: process.env.NOTIFY_EMAIL || 'silviu@asap.ro',
+      subject: `Nou subscriber LSD: ${email}`,
+      html: `
+        <h2>Subscriber nou pe LSD website</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Nume:</strong> ${name || '—'}</p>
+        <p><strong>Interes:</strong> ${interest || '—'}</p>
+        <p><strong>Data:</strong> ${new Date().toLocaleString('ro-RO')}</p>
+        <p style="color:#888">Total subscriberi: ${subscribers.length}</p>
+      `,
+    }).catch(() => {
+      // Don't fail the subscription if notification fails
+    });
+  }
 
   return { success: true };
 }
