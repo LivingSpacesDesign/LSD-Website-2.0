@@ -165,19 +165,20 @@ export function Footer() {
 
       {/* Bottom bar */}
       <div
-        className="relative z-10 flex flex-col items-center gap-3 sm:flex-row sm:gap-4"
+        className="relative z-10 flex flex-col items-center gap-2 text-center"
         style={{
           borderTop: '1px solid var(--color-border)',
           margin: '0 var(--footer-px)',
           padding: '32px 0',
         }}
       >
-        <span className="hidden sm:block sm:flex-1" aria-hidden="true" />
+        <span style={{ color: 'var(--color-ash)', fontSize: '12px' }}>
+          &copy; 2020 Living Spaces Design &mdash; Development S.R.L.
+        </span>
         <a
           href="https://asap-digital.dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="sm:flex-1 sm:text-center"
           style={{
             color: 'var(--color-ash)',
             fontSize: '12px',
@@ -189,12 +190,6 @@ export function Footer() {
         >
           Web Design &amp; Development by ASAP*DIGITAL
         </a>
-        <span
-          className="sm:flex-1 sm:text-right"
-          style={{ color: 'var(--color-ash)', fontSize: '12px' }}
-        >
-          &copy; 2020 Living Spaces Design &mdash; Development S.R.L.
-        </span>
       </div>
 
       {/* Footer responsive spacing */}
